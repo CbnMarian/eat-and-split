@@ -1,0 +1,11 @@
+[33mcommit f6b0cea313c09bc5d1fa8ea5286671c941b0b161[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: CbnMarian <m.marian03@yahoo.com>
+Date:   Thu Dec 14 12:47:37 2023 +0200
+
+    first commit
+
+[33mcommit d1f234b970654cdb1a3bf9acc8863b9f31595db3[m
+Author: Marian Ciobanu <115780102+CbnMarian@users.noreply.github.com>
+Date:   Wed Dec 13 17:02:07 2023 +0200
+
+    Initialize project using Create React App
