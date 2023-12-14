@@ -1,3 +1,4 @@
+import { useState } from "react";
 const initialFriends = [
   {
     id: 118836,
@@ -18,15 +19,31 @@ const initialFriends = [
     balance: 0,
   },
 ];
+function Button({ children, onClick }) {
+  return (
+    <button className="button" onClick={onClick}>
+      {" "}
+      {children}
+    </button>
+  );
+}
 
 export default function App() {
+  const [showAddFriend, setShowAddFriend] = useState(false);
+  function handleShowAddFriend() {
+    setShowAddFriend((show) => !show);
+  }
+
   return (
     <div className="app">
       <div className="sidebar">
         <FriendList />
-        <FormAddFriend />
-        <Button>Add friend</Button>
+        {showAddFriend && <FormAddFriend />}
+        <Button onClick={handleShowAddFriend}>
+          {showAddFriend ? "close" : "Add friend"}
+        </Button>
       </div>
+      <FormSplitBill />
     </div>
   );
 }
@@ -69,17 +86,24 @@ function Friend({ friend }) {
   );
 }
 
-function Button({ children }) {
-  return <button className="button"> {children}</button>;
-}
-
 function FormAddFriend() {
+  const [name, setName] = useState("");
+  const [image, setImage] = useState("");
+
   return (
     <form className="form-add-friend">
       <label>Friend name😁</label>
-      <input type="text" />
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <label>🙅‍♀️ Image URL</label>
-      <input type="text" />
+      <input
+        type="text"
+        value={image}
+        onChange={(e) => setImage(e.target.value)}
+      />
 
       <Button>Add</Button>
     </form>
@@ -90,6 +114,23 @@ function FormSplitBill() {
   return (
     <form className="form-split-bill">
       <h2>Split a bill with X</h2>
+
+      <label>💲 Bill VALUE</label>
+      <input type="text" />
+
+      <label>Your expense</label>
+      <input type="text" />
+
+      <label>x' expense</label>
+      <input type="text" disabled />
+
+      <label>💸 Who is paying the bill</label>
+      <selecy>
+        <option value="user">x</option>
+        <option value="friend">x</option>
+      </selecy>
+
+      <Button>Add</Button>
     </form>
   );
 }
