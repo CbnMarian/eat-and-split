@@ -1,3 +1,3 @@
-# RENT A CAR
+# EAT AND SPLIT THE BILL
 
-A vehicle rental platform is an internet-based service designed to facilitate the seamless rental of automobiles for both personal and business purposes. This digital hub offers users an intuitive interface to explore, compare, and secure rental cars, providing a convenient and efficient way to meet diverse transportation needs.
+Users can interact with the friend list, select specific friends, and split bills with them. The app includes a user-friendly interface with features like adding new friends through a form, visual indicators for balance status, and responsive design for various screen sizes.
